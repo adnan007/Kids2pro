@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Test Page</title>
+    <meta content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;"
+        name="viewport">
+    <script type="text/javascript" src="jquery-1.4.2.js"></script>
+    <script type="text/javascript">
+
+        function getLogin() {
+            $.ajax(
+{
+    type: "POST",
+    url: "http://2bvision.com/kids2promobile/login.asmx/LoginUser",
+    data: "{userName: '" + $('#txtEmail').val() + "','password':'" + $('#txtPassword').val() + "'}",
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+
+    success: function (response, status) {
+	//	alert('Success');
+      $("#Message").html("Success");
+	
+    },
+    failure: function (msg) {
+        document.getElementById('Message').innerHTML = 'Failure';
+    }
+}
+	);
+        }	
+    </script>
+</head>
+<body>
+    <div>
+        <div>
+            <label>
+                User Name:</label>
+            <input id="txtEmail" type="text" tabindex="1" size="50" maxlength="40" name="email" />
+        </div>
+        <div>
+			<label>Password:</label>
+		    <input class="inputBox" id="txtPassword" type="password" tabindex="1" size="20" maxlength="15" name"txtPassword"/>
+	    </div>
+        <div>
+            <input id="submit" type="submit" tabindex="3" onclick="getLogin()" name="submit"
+                value="Login" />
+        </div>
+        <br>
+        <div id="Message" style="color:#000;">
+        </div>
+<br>
+    </div>
+</body>
+</html>
