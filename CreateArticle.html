@@ -165,7 +165,7 @@ var select = document.getElementById("DropDownListKeyword");
 		}}
 		else
 		{
-			$("#DropDownListKeyword")[0].options.add( new Option("--------","0"));
+		$("#DropDownListKeyword")[0].options.add( new Option("--------","0"));
 		}
 		$("#loadingmessage").hide();
 	},
@@ -298,8 +298,8 @@ contentType: "application/json; charset=utf-8",
 dataType: "json",
 
 success: function (response, status) {
-	
-	alert(response.d);
+	var RedirectUrl="ViewArticle.html?Id="+Response.d+"";
+	window.location.href=RedirectUrl;
 	},
 		failure: function (msg) {
 		alert(msg);}

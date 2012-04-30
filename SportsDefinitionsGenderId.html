@@ -34,7 +34,6 @@
                     'bInfo': true,
                     'bRetrieve': true,
                     "sPaginationType": "full_numbers",
-
                     'bFilter': true
 
                 });
@@ -53,9 +52,14 @@
                     $('#errorMessage').text(errMsg); //errorMessage is id of the div
                 }
             });
-
-
         });
+		 $(document).ready(function () {
+            $("#SportsGenderGrid tbody tr").live('click', function () {
+                var firstCellText = $("td:first", this).text();
+                window.location.href= 'ViewSubSport.html?SportName=' + firstCellText;
+            });
+        });
+		
     </script>
 </head>
 <body>

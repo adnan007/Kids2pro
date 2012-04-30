@@ -372,24 +372,24 @@ var select = document.getElementById("DropDownListCounty");
 	
 	
 		
-}
-
-});
-function ShowCityText()
-{
-$("#DropDownListCity").hide();	
-$("#HrefMyCity").hide();	
-$("#TextBoxChangeCity").show();	
-$("#HrefSerachCity").show();
-<!--$("#TextBoxChangeCity").show();	-->
-}
-function HideCityText()
-{
-$("#HrefMyCity").show();	
-$("#HrefSerachCity").hide();	
-$("#DropDownListCity").show();	
-$("#TextBoxChangeCity").hide();
-}
+	}
+	
+	});
+	function ShowCityText()
+	{
+	$("#DropDownListCity").hide();	
+	$("#HrefMyCity").hide();	
+	$("#TextBoxChangeCity").show();	
+	$("#HrefSerachCity").show();
+	<!--$("#TextBoxChangeCity").show();	-->
+	}
+	function HideCityText()
+	{
+	$("#HrefMyCity").show();	
+	$("#HrefSerachCity").hide();	
+	$("#DropDownListCity").show();	
+	$("#TextBoxChangeCity").hide();
+	}
 
 
 	function CreateTeam(){	
@@ -409,7 +409,7 @@ $("#TextBoxChangeCity").hide();
           
 	if( $('#TextBoxTeamNameChange').val()!='0' && $('#DropDownListSportName').val()!='0' && $('#DropDownListSportCategory').val()!='0' && $('#TextBoxChangeAffiliation').val()!='' && $('#TextBoxDescription').val()!='' )
 	{		
-	var DObject="{thisteam: '" + team + "','userName':'" + $.Storage.get("UserName")+"'}";
+	var DObject={"thisteam":  team ,"userName": $.Storage.get("UserName")};
 	
 	$.ajax(
 {
@@ -421,7 +421,9 @@ dataType: "json",
 
 success: function (response, status) {
 	
+	window.location.href="ViewTeam.html?Id="+response.d;
 	alert(response.d);
+	
 	},
 		failure: function (msg) {
 		alert(msg);}

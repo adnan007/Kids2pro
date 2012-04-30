@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>login</title>
-
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <link rel="shortcut icon" href="images/favicon.ico" type="image/png">
 <meta content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;" name="viewport">
 <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -14,6 +14,7 @@
  <script>
 
 function getLogin() {
+	$("#lblEror").val('');
 $.ajax(
 {
 type: "POST",
@@ -26,8 +27,12 @@ dataType: "json",
 
 success: function (response, status) {
 		var login=response.d;
+		if(login!=null)
+		{
 	 	$.Storage.set("UserName", response.d);
-      	window.location='userprofile.html';  
+      	window.location.href ='userprofile.html';  
+		}
+		else{ $("#lblEror").text("Username or Password is incorrect");}
 
 	},
 		failure: function (msg) {
@@ -94,14 +99,18 @@ var version = $.evalJSON(encoded).version;
                     	<div class="row newuser">
 							Please enter your username and password. <a href="register.html">Register</a> if you don't have an account. 
 						</div>
+                        <div class="errorLogin" >
+                        <label id="lblEror"  ></label>
+                        </div>
+                        <div class="clearfix"> </div>
                         <div class="line"></div>
                         <div class="row clearfix">
 							<label>User Name:</label>
-							<input id="txtEmail" class="inputBox" type="text" tabindex="1" size="50" maxlength="60" name="email" >	
+							<input id="txtEmail" class="inputBox" type="text"  PlaceHolder="Enter username here" tabindex="1" size="50" maxlength="60" name="email" >	
 						</div>
                         <div class="row clearfix">
 							<label>Password:</label>
-							<input id="txtPassword" class="inputBox" type="password" tabindex="1" size="20" maxlength="15" name="password">
+							<input id="txtPassword" class="inputBox" type="password" PlaceHolder="Enter password here" tabindex="1" size="20" maxlength="15" name="password">
 						</div>
                         <div class="line"></div>
                         <div class="row newuser clearfix">

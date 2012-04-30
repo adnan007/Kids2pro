@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
 V 36
-/svn/K2PMobileApp/!svn/ver/16/static
+/svn/K2PMobileApp/!svn/ver/44/static
 END
 Philanthropy.html
 K 25
@@ -15,11 +15,11 @@ svn:wc:ra_dav:version-url
 V 53
 /svn/K2PMobileApp/!svn/ver/1/static/SportsICandy.html
 END
-TechServices.html
+Discovered.html
 K 25
 svn:wc:ra_dav:version-url
-V 54
-/svn/K2PMobileApp/!svn/ver/39/static/TechServices.html
+V 52
+/svn/K2PMobileApp/!svn/ver/39/static/Discovered.html
 END
 mediaKit.html
 K 25
@@ -27,23 +27,23 @@ svn:wc:ra_dav:version-url
 V 50
 /svn/K2PMobileApp/!svn/ver/39/static/mediaKit.html
 END
-Discovered.html
+TechServices.html
 K 25
 svn:wc:ra_dav:version-url
-V 52
-/svn/K2PMobileApp/!svn/ver/39/static/Discovered.html
-END
-sports.html
-K 25
-svn:wc:ra_dav:version-url
-V 47
-/svn/K2PMobileApp/!svn/ver/1/static/sports.html
+V 54
+/svn/K2PMobileApp/!svn/ver/39/static/TechServices.html
 END
 terms&conditions.html
 K 25
 svn:wc:ra_dav:version-url
 V 57
 /svn/K2PMobileApp/!svn/ver/1/static/terms&conditions.html
+END
+sports.html
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/K2PMobileApp/!svn/ver/1/static/sports.html
 END
 welcome.html
 K 25

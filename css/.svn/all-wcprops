@@ -1,7 +1,7 @@
 K 25
 svn:wc:ra_dav:version-url
-V 32
-/svn/K2PMobileApp/!svn/ver/1/css
+V 33
+/svn/K2PMobileApp/!svn/ver/59/css
 END
 style - Copy.css
 K 25
@@ -31,7 +31,7 @@ style.css
 K 25
 svn:wc:ra_dav:version-url
 V 43
-/svn/K2PMobileApp/!svn/ver/41/css/style.css
+/svn/K2PMobileApp/!svn/ver/58/css/style.css
 END
 skeleton.css
 K 25
@@ -44,4 +44,10 @@ K 25
 svn:wc:ra_dav:version-url
 V 51
 /svn/K2PMobileApp/!svn/ver/1/css/ui.multiselect.css
+END
+styleTab.css
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/K2PMobileApp/!svn/ver/59/css/styleTab.css
 END
